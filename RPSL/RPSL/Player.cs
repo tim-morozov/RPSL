@@ -6,9 +6,11 @@ using System.Threading.Tasks;
 
 namespace RPSL
 {
-    class Player
+   abstract class Player
     {
         protected string name;
+        public Gesture gesture;
+        public string type;
 
         public Player()
         {

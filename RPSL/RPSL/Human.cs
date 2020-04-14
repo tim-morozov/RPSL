@@ -9,9 +9,16 @@ namespace RPSL
     class Human : Player
     {
 
-        public Human(string name)
+        public Human()
         {
-            this.name = name;
+            name = AddName();
+        }
+
+        public string AddName()
+        {
+            Console.WriteLine("Write your name!");
+            string input = Console.ReadLine();
+            return input;
         }
     }
 }
