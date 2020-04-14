@@ -8,5 +8,9 @@ namespace RPSL
 {
     class Lizard : Gesture
     {
+        public Lizard()
+        {
+            type = "Lizard";
+        }
     }
 }

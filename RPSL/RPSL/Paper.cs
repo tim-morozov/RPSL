@@ -8,5 +8,9 @@ namespace RPSL
 {
     class Paper : Gesture
     {
+        public Paper()
+        {
+            type = "Paper";
+        }
     }
 }

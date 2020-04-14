@@ -8,5 +8,9 @@ namespace RPSL
 {
     class Scissors : Gesture
     {
+        public Scissors()
+        {
+            type = "Sciccors";
+        }
     }
 }

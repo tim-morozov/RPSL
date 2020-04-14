@@ -8,5 +8,9 @@ namespace RPSL
 {
     class Rock : Gesture
     {
+        public Rock()
+        {
+            type = "Rock";
+        }
     }
 }

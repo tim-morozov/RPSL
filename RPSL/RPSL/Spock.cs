@@ -8,5 +8,10 @@ namespace RPSL
 {
     class Spock : Gesture
     {
+
+        public Spock()
+        {
+            type = "Spock";
+        }
     }
 }

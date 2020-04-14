@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace RPSL
 {
-    class Gesture
+    abstract class  Gesture
     {
+        protected string type;
     }
 }
