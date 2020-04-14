@@ -16,5 +16,19 @@ namespace RPSL
             playerOne = new Human();
 
         }
+
+        public void ChooseMultiplayer()
+        {
+            Console.WriteLine("Would you like to play with a friend? Y or N");
+            string selection = Console.ReadLine();
+            if(selection == "Y")
+            {
+                playerTwo = new Human(); 
+            }
+            else
+            {
+                playerTwo = new Computer();
+            }
+        }
     }
 }
