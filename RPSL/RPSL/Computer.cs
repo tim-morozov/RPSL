@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace RPSL
 {
-    class Computer
+    class Computer : Player
     {
+        public Computer()
+        {
+            name = "Computer";
+        }
     }
 }

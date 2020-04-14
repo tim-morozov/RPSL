@@ -6,12 +6,7 @@ using System.Threading.Tasks;
 
 namespace RPSL
 {
-    class Human : Player
+    class Game
     {
-
-        public Human(string name)
-        {
-            this.name = name;
-        }
     }
 }

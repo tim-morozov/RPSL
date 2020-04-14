@@ -8,5 +8,11 @@ namespace RPSL
 {
     class Player
     {
+        protected string name;
+
+        public Player()
+        {
+            
+        }
     }
 }
