@@ -10,6 +10,8 @@ namespace RPSL
     {
         Player playerOne;
         Player playerTwo;
+        int playerOneScore = 0;
+        int playerTwoScore = 0;
 
         public Game()
         {
