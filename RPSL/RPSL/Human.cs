@@ -20,5 +20,10 @@ namespace RPSL
             string input = Console.ReadLine();
             return input;
         }
+        //Works off user input only for Human players
+        public override void ChooseGesture()
+        {
+            
+        }
     }
 }

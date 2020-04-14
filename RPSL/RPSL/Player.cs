@@ -10,11 +10,13 @@ namespace RPSL
     {
         protected string name;
         public Gesture gesture;
-        public string type;
 
         public Player()
         {
             
         }
+
+        // Abstract method so both childrens' methods  react differently
+        public abstract void ChooseGesture();
     }
 }

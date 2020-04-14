@@ -16,7 +16,8 @@ namespace RPSL
             playerOne = new Human();
 
         }
-
+        //Allows Human player to select if they want to play against the Computer
+        //based on user input
         public void ChooseMultiplayer()
         {
             Console.WriteLine("Would you like to play with a friend? Y or N");

@@ -12,5 +12,10 @@ namespace RPSL
         {
             name = "Computer";
         }
+        // Will randomly select a gesture
+        public override void ChooseGesture()
+        {
+            
+        }
     }
 }
