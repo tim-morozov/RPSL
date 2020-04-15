@@ -9,13 +9,14 @@ namespace RPSL
    abstract class Player
     {
         public List<Gesture> allGestures;
-        protected string name;
+        public string name;
         public Gesture gesture;
         public Gesture rock = new Rock();
         public Gesture paper = new Paper();
         public Gesture scissors = new Scissors();
         public Gesture lizard = new Lizard();
         public Gesture spock = new Spock();
+        
 
         public Player()
         {
@@ -28,7 +29,7 @@ namespace RPSL
         }
 
         // Abstract method so both childrens' methods  react differently
-        public abstract void ChooseGesture();
+        public abstract Gesture ChooseGesture();
 
         
     }

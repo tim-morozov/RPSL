@@ -11,7 +11,7 @@ namespace RPSL
         static void Main(string[] args)
         {
             Game game = new Game();
-            game.DisplayRules();
+            game.RunGame();
             Console.ReadLine();
         }
     }

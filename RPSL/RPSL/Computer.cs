@@ -13,10 +13,11 @@ namespace RPSL
             name = "Computer";
         }
         // Will randomly select a gesture
-        public override void ChooseGesture()
+        public override Gesture ChooseGesture()
         {
             int i = RandomNumber();
-            gesture = allGestures[i];            
+            Gesture gesture = allGestures[i];
+            return gesture;
         }
         //Generates a random int to plug into the ChooseGesture method
         public int RandomNumber()

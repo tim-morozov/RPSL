@@ -59,13 +59,29 @@ namespace RPSL
             playerOneScore = 0;
             playerTwoScore = 0;
         }
+        //Conducts one round of gameplay
+        public void Round(Player playerOne, Player playerTwo)
+        {
+            playerOne.gesture = playerOne.ChooseGesture();
+            if(playerTwo.name == "Computer")
+            {
+               playerTwo.gesture = playerTwo.ChooseGesture();
+            }
+            else
+            {
+                playerTwo.gesture = playerTwo.ChooseGesture();
+            }
+            Console.WriteLine(playerOne.name + " chose " + playerOne.gesture.type);
+            Console.WriteLine(playerTwo.name + " chose " + playerTwo.gesture.type);
+        }
 
         public void RunGame()
         {
             ResetScore();
             Console.WriteLine("Welcome to Rock, Paper, Scissors, Lizzard, Spock!");
-            DisplayRules();
             ChooseMultiplayer();
+            DisplayRules();            
+            Round(playerOne, playerTwo);
         
             
 
