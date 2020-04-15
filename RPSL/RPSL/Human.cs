@@ -23,7 +23,14 @@ namespace RPSL
         //Works off user input only for Human players
         public override void ChooseGesture()
         {
-            
+            Console.WriteLine("Please choose a gesture:");
+            for (int i = 0; i < allGestures.Count; i++)
+            {
+                Console.WriteLine(i + ")" + allGestures[i]);
+            }
+            int choice = Convert.ToInt32(Console.ReadLine());
+            gesture = allGestures[choice];
+
         }
     }
 }

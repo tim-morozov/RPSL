@@ -58,7 +58,7 @@ namespace RPSL
 
         public void RunGame()
         {
-            Console.WriteLine("Welcome to Rock, Paper, Scissors, Lizzard, Spock");
+            Console.WriteLine("Welcome to Rock, Paper, Scissors, Lizzard, Spock!");
             DisplayRules();
             ChooseMultiplayer();
 
