@@ -10,6 +10,9 @@ namespace RPSL
     {
         static void Main(string[] args)
         {
+            Game game = new Game();
+            game.DisplayRules();
+            Console.ReadLine();
         }
     }
 }
