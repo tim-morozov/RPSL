@@ -10,14 +10,12 @@ namespace RPSL
     {
         Player playerOne;
         Player playerTwo;
-        int playerOneScore = 0;
-        int playerTwoScore = 0;
-        List<string> gestureList;
+        int playerOneScore;
+        int playerTwoScore;
 
         public Game()
         {
             playerOne = new Human();
-            gestureList = new List<string>() { "Rock", "Paper", "Scissors", "Lizard", "Spock" };
         }
         //Allows Human player to select if they want to play against the Computer
         //based on user input
@@ -40,7 +38,7 @@ namespace RPSL
             Console.WriteLine("The game will be played until one player has won 3 times \n You will choose 1 of 5 options");
             for(int i = 0; i < playerOne.allGestures.Count; i++)
             {
-                Console.WriteLine(i + ")" + gestureList[i]);
+                Console.WriteLine(i + ")" + playerOne.allGestures[i].type);
             }
             Console.WriteLine("The rules for each gesture are:");
             Console.WriteLine("Rock crushes Scissors");
@@ -55,12 +53,21 @@ namespace RPSL
             Console.WriteLine("Spock vaporizes Rock");
 
         }
+        //Resets player score before and after game
+        public void ResetScore()
+        {
+            playerOneScore = 0;
+            playerTwoScore = 0;
+        }
 
         public void RunGame()
         {
+            ResetScore();
             Console.WriteLine("Welcome to Rock, Paper, Scissors, Lizzard, Spock!");
             DisplayRules();
             ChooseMultiplayer();
+        
+            
 
         }
     }

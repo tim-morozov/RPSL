@@ -8,6 +8,6 @@ namespace RPSL
 {
     abstract class  Gesture
     {
-        protected string type;
+        public string type;
     }
 }
