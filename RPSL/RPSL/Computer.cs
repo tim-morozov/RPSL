@@ -15,7 +15,15 @@ namespace RPSL
         // Will randomly select a gesture
         public override void ChooseGesture()
         {
-            
+            int i = RandomNumber();
+            gesture = allGestures[i];            
+        }
+        //Generates a random int to plug into the ChooseGesture method
+        public int RandomNumber()
+        {
+            Random random = new Random();
+            int output = random.Next(0, allGestures.Count);
+            return output;
         }
     }
 }
