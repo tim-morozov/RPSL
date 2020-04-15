@@ -34,7 +34,7 @@ namespace RPSL
                 playerTwo = new Computer();
             }
         }
-
+        //Displays basic game rules
         public void DisplayRules()
         {
             Console.WriteLine("The game will be played until one player has won 3 times \n You will choose 1 of 5 options");
@@ -53,6 +53,14 @@ namespace RPSL
             Console.WriteLine("Lizard eats Paper");
             Console.WriteLine("Paper disproves Spock");
             Console.WriteLine("Spock vaporizes Rock");
+
+        }
+
+        public void RunGame()
+        {
+            Console.WriteLine("Welcome to Rock, Paper, Scissors, Lizzard, Spock");
+            DisplayRules();
+            ChooseMultiplayer();
 
         }
     }
