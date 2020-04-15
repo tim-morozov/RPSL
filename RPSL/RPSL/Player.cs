@@ -30,6 +30,7 @@ namespace RPSL
 
         // Abstract method so both childrens' methods  react differently
         public abstract Gesture ChooseGesture();
+        
 
         
     }

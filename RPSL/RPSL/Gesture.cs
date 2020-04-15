@@ -9,5 +9,7 @@ namespace RPSL
     abstract class  Gesture
     {
         public string type;
+
+       public abstract bool Compare();
     }
 }

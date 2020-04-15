@@ -12,5 +12,17 @@ namespace RPSL
         {
             type = "Rock";
         }
+
+        public bool Compare(string playerTwo)
+        {
+            if(playerTwo == "Scissors" || playerTwo == "Lizard" )
+            {
+                return true;   
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }

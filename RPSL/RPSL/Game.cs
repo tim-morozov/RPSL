@@ -10,8 +10,8 @@ namespace RPSL
     {
         Player playerOne;
         Player playerTwo;
-        int playerOneScore;
-        int playerTwoScore;
+        public int playerOneScore = 0;
+        public int playerTwoScore = 0;
 
         public Game()
         {
@@ -23,7 +23,8 @@ namespace RPSL
         {
             Console.WriteLine("Would you like to play with a friend? Y or N");
             string selection = Console.ReadLine();
-            if(selection == "Y")
+            selection = selection.ToLower(); //So no matter what case the user writes it can always evaluate properly
+            if(selection == "y")
             {
                 playerTwo = new Human(); 
             }
@@ -73,6 +74,16 @@ namespace RPSL
             }
             Console.WriteLine(playerOne.name + " chose " + playerOne.gesture.type);
             Console.WriteLine(playerTwo.name + " chose " + playerTwo.gesture.type);
+        }
+
+        public void CompareGestures(Gesture pOne, Gesture pTwo)
+        {
+            if(pOne.type == "Rock")
+            {
+                bool output = pTwo.Compare();
+
+            }
+
         }
 
         public void RunGame()

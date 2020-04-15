@@ -12,5 +12,17 @@ namespace RPSL
         {
             type = "Paper";
         }
+
+        public void PaperCompare(string playerTwo)
+        {
+            if (playerTwo == "Rock" || playerTwo == "Spock")
+            {
+
+            }
+            else
+            {
+
+            }
+        }
     }
 }
