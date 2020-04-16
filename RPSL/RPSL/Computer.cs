@@ -10,7 +10,7 @@ namespace RPSL
     {
         public Computer()
         {
-            name = "Computer";
+            name = "Sheldon";
         }
         // Will randomly select a gesture
         public override Gesture ChooseGesture()
