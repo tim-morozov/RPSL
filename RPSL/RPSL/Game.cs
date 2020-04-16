@@ -12,6 +12,7 @@ namespace RPSL
         Player playerTwo;
         public int playerOneScore = 0;
         public int playerTwoScore = 0;
+        int numberOfRounds = 3;
 
         public Game()
         {
@@ -189,6 +190,20 @@ namespace RPSL
                 Console.WriteLine(playerTwo.name + " is the winner!");
             }
         }
+        public void PlayAgain()
+        {
+            Console.WriteLine("Would you like to play again? Y or N");
+            string input = Console.ReadLine();
+             input = input.ToLower(); //To evaluate the input no matter which case the user types
+            if(input == "y")
+            {
+                RunGame();
+            }
+            else
+            {
+                Console.WriteLine("Have a nice day!");
+            }
+        }
 
 
         public void RunGame()
@@ -196,12 +211,14 @@ namespace RPSL
             ResetScore();
             Console.WriteLine("Welcome to Rock, Paper, Scissors, Lizzard, Spock!");
             ChooseMultiplayer();
-            DisplayRules();            
-            Round(playerOne, playerTwo);
-            CompareGestures(playerOne.gesture, playerTwo.gesture);
-        
-            
-
+            DisplayRules();
+            for (int i = 0; i <= numberOfRounds; i++)
+            {
+                Round(playerOne, playerTwo);
+                CompareGestures(playerOne.gesture, playerTwo.gesture);
+            }
+            DeclareWinner();
+            PlayAgain();
         }
     }
 }
