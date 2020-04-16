@@ -36,7 +36,7 @@ namespace RPSL
         //Displays basic game rules
         public void DisplayRules()
         {
-            Console.WriteLine("The game will be played until one player has won 3 times \n You will choose 1 of 5 options");
+            Console.WriteLine("The game will be in a best of 3 format \n You will choose 1 of 5 options");
             for(int i = 0; i < playerOne.allGestures.Count; i++)
             {
                 Console.WriteLine(i + ")" + playerOne.allGestures[i].type);
@@ -78,13 +78,91 @@ namespace RPSL
 
         public void CompareGestures(Gesture pOne, Gesture pTwo)
         {
-            if(pOne.type == "Rock")
+            if(pOne.type == pTwo.type)
             {
-                bool output = pTwo.Compare();
-
+                Round(playerOne, playerTwo);
+            }
+            else if(pOne.type == "Rock") 
+            {
+                RockCompare(pTwo.type);
+            }
+            else if(pOne.type == "Paper")
+            {
+                PaperCompare(pTwo.type);
+            }
+            else if(pOne.type == "Scissors")
+            {
+                ScissorsCompare(pTwo.type);
+            }
+            else if(pOne.type == "Lizard")
+            {
+                LizzardCompare(pTwo.type);
+            }
+            else if(pOne.type == "Spock")
+            {
+                SpockCompare(pTwo.type);
             }
 
         }
+
+        public void RockCompare(string pTwo)
+        {
+            if(pTwo == "Scissors" || pTwo == "Lizard")
+            {
+                playerOneScore++;
+            }
+            else
+            {
+                playerTwoScore++;
+            }
+        }
+
+        public void PaperCompare(string pTwo)
+        {
+            if (pTwo == "Rock" || pTwo == "Scissors")
+            {
+                playerOneScore++;
+            }
+            else
+            {
+                playerTwoScore++;
+            }
+        }
+        public void ScissorsCompare(string pTwo)
+        {
+            if (pTwo == "Paper" || pTwo == "Lizard")
+            {
+                playerOneScore++;
+            }
+            else
+            {
+                playerTwoScore++;
+            }
+        }
+        public void LizzardCompare(string pTwo)
+        {
+            if (pTwo == "Spock" || pTwo == "Paper")
+            {
+                playerOneScore++;
+            }
+            else
+            {
+                playerTwoScore++;
+            }
+        }
+
+        public void SpockCompare(string pTwo)
+        {
+            if (pTwo == "Scissors" || pTwo == "Rock")
+            {
+                playerOneScore++;
+            }
+            else
+            {
+                playerTwoScore++;
+            }
+        }
+
 
         public void RunGame()
         {
@@ -93,6 +171,7 @@ namespace RPSL
             ChooseMultiplayer();
             DisplayRules();            
             Round(playerOne, playerTwo);
+            CompareGestures(playerOne.gesture, playerTwo.gesture);
         
             
 
