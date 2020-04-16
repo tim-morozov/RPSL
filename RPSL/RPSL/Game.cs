@@ -12,8 +12,7 @@ namespace RPSL
         Player playerTwo;
         public int playerOneScore = 0;
         public int playerTwoScore = 0;
-        int numberOfRounds = 3;
-        int winScore = 2;
+        const int winScore = 2;
 
         public Game()
         {
@@ -215,7 +214,7 @@ namespace RPSL
             Console.WriteLine("Welcome to Rock, Paper, Scissors, Lizzard, Spock!");
             ChooseMultiplayer();
             DisplayRules();
-            for(int i = 1; i <= numberOfRounds; i++)
+            while(playerOneScore <= winScore && playerTwoScore <= winScore)
             {
                 Round(playerOne, playerTwo);               
                 if(playerOneScore == winScore || playerTwoScore == winScore)
