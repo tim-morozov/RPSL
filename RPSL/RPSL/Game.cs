@@ -13,10 +13,11 @@ namespace RPSL
         public int playerOneScore = 0;
         public int playerTwoScore = 0;
         int numberOfRounds = 3;
+        int winScore = 2;
 
         public Game()
         {
-            playerOne = new Human();
+            playerOne = new Human();//Always creates Player One as a Human
         }
         //Allows Human player to select if they want to play against the Computer
         //based on user input
@@ -77,7 +78,7 @@ namespace RPSL
             Console.WriteLine(playerTwo.name + " chose " + playerTwo.gesture.type);
             CompareGestures(playerOne.gesture, playerTwo.gesture);
         }
-
+        //Uses separate compare methods for each gesture
         public void CompareGestures(Gesture pOne, Gesture pTwo)
         {
             if(pOne.type == pTwo.type)
@@ -191,6 +192,7 @@ namespace RPSL
                 Console.WriteLine(playerTwo.name + " is the winner!");
             }
         }
+        //Gives the user the option to play again if they want
         public void PlayAgain()
         {
             Console.WriteLine("Would you like to play again? Y or N");
@@ -216,7 +218,7 @@ namespace RPSL
             for(int i = 1; i <= numberOfRounds; i++)
             {
                 Round(playerOne, playerTwo);               
-                if(playerOneScore == 2 || playerTwoScore == 2)
+                if(playerOneScore == winScore || playerTwoScore == winScore)
                 {
                     break;
                 }
