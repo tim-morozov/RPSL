@@ -12,7 +12,7 @@ namespace RPSL
         Player playerTwo;
         public int playerOneScore = 0;
         public int playerTwoScore = 0;
-        const int winScore = 2;
+        const int winScore = 2; //const so value can't be manipulated with code
 
         public Game()
         {
