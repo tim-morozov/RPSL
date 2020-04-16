@@ -13,11 +13,11 @@ namespace RPSL
             type = "Rock";
         }
 
-        public bool Compare(string playerTwo)
+        public override bool Compare(string playerTwo)
         {
             if(playerTwo == "Scissors" || playerTwo == "Lizard" )
             {
-                return true;   
+                return true;
             }
             else
             {

@@ -10,6 +10,6 @@ namespace RPSL
     {
         public string type;
 
-       public abstract bool Compare();
+        public abstract bool Compare(string type);
     }
 }

@@ -75,6 +75,7 @@ namespace RPSL
             }
             Console.WriteLine(playerOne.name + " chose " + playerOne.gesture.type);
             Console.WriteLine(playerTwo.name + " chose " + playerTwo.gesture.type);
+            CompareGestures(playerOne.gesture, playerTwo.gesture);
         }
 
         public void CompareGestures(Gesture pOne, Gesture pTwo)
@@ -212,10 +213,13 @@ namespace RPSL
             Console.WriteLine("Welcome to Rock, Paper, Scissors, Lizzard, Spock!");
             ChooseMultiplayer();
             DisplayRules();
-            for (int i = 0; i <= numberOfRounds; i++)
+            for(int i = 1; i <= numberOfRounds; i++)
             {
-                Round(playerOne, playerTwo);
-                CompareGestures(playerOne.gesture, playerTwo.gesture);
+                Round(playerOne, playerTwo);               
+                if(playerOneScore == 2 || playerTwoScore == 2)
+                {
+                    break;
+                }
             }
             DeclareWinner();
             PlayAgain();

@@ -22,9 +22,9 @@ namespace RPSL
         {
             allGestures = new List<Gesture>();
             allGestures.Add(rock);    
-            allGestures.Add(paper);    
-            allGestures.Add(lizard);    
-            allGestures.Add(scissors);    
+            allGestures.Add(paper);
+            allGestures.Add(scissors);
+            allGestures.Add(lizard);                    
             allGestures.Add(spock);    
         }
 

@@ -14,15 +14,15 @@ namespace RPSL
             type = "Spock";
         }
 
-        public void SpockCompare(string playerTwo)
+        public override bool Compare(string playerTwo)
         {
             if (playerTwo == "Sciccors" || playerTwo == "Rock")
             {
-
+                return true;
             }
             else
             {
-
+                return false;
             }
         }
     }

@@ -13,15 +13,15 @@ namespace RPSL
             type = "Paper";
         }
 
-        public void PaperCompare(string playerTwo)
+        public override bool Compare(string playerTwo)
         {
             if (playerTwo == "Rock" || playerTwo == "Spock")
             {
-
+                return true;
             }
             else
             {
-
+                return false;
             }
         }
     }
