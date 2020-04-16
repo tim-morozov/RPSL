@@ -80,31 +80,46 @@ namespace RPSL
         {
             if(pOne.type == pTwo.type)
             {
+                Console.WriteLine("You tied!");
                 Round(playerOne, playerTwo);
             }
             else if(pOne.type == "Rock") 
             {
                 RockCompare(pTwo.type);
+                Console.WriteLine(playerOne.name + " score: " + playerOneScore);
+                Console.WriteLine(playerTwo.name + " score: " + playerTwoScore);
             }
             else if(pOne.type == "Paper")
             {
                 PaperCompare(pTwo.type);
+                Console.WriteLine(playerOne.name + " score: " + playerOneScore);
+                Console.WriteLine(playerTwo.name + " score: " + playerTwoScore);
             }
             else if(pOne.type == "Scissors")
             {
                 ScissorsCompare(pTwo.type);
+                Console.WriteLine(playerOne.name + " score: " + playerOneScore);
+                Console.WriteLine(playerTwo.name + " score: " + playerTwoScore);
             }
             else if(pOne.type == "Lizard")
             {
                 LizzardCompare(pTwo.type);
+                Console.WriteLine(playerOne.name + " score: " + playerOneScore);
+                Console.WriteLine(playerTwo.name + " score: " + playerTwoScore);
             }
             else if(pOne.type == "Spock")
             {
                 SpockCompare(pTwo.type);
+                Console.WriteLine(playerOne.name + " score: " + playerOneScore);
+                Console.WriteLine(playerTwo.name + " score: " + playerTwoScore);
+            }
+            else
+            {
+                Console.WriteLine("Try again!");
             }
 
         }
-
+        
         public void RockCompare(string pTwo)
         {
             if(pTwo == "Scissors" || pTwo == "Lizard")
@@ -160,6 +175,18 @@ namespace RPSL
             else
             {
                 playerTwoScore++;
+            }
+        }
+
+        public void DeclareWinner()
+        {
+            if(playerOneScore > playerTwoScore)
+            {
+                Console.WriteLine(playerOne.name + " is the winner!");
+            }
+            else
+            {
+                Console.WriteLine(playerTwo.name + " is the winner!");
             }
         }
 
